@@ -1,0 +1,57 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace = "com.example.chatapp"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "25.1.8937393"
+    // ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.chatapp"
+        minSdkVersion = 23
+        targetSdk = flutter.targetSdkVersion
+        multiDexEnabled true
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Signing with the debug keys for now, so flutter run --release works.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+  // Import the Firebase BoM
+  implementation platform('com.google.firebase:firebase-bom:33.7.0')
+
+  // Add Firebase dependencies
+  implementation 'com.google.firebase:firebase-auth'
+  implementation 'com.google.firebase:firebase-firestore'
+  implementation 'com.google.firebase:firebase-storage'
+  implementation 'com.google.firebase:firebase-messaging'
+
+  implementation 'com.android.support:multidex:1.0.3'
+  // Add other dependencies as needed
+}

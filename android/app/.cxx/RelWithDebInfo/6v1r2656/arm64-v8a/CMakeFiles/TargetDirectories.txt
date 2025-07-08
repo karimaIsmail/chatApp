@@ -1,0 +1,2 @@
+C:/Users/DELL/.ms-ad/Desktop/chatapp/android/app/.cxx/RelWithDebInfo/6v1r2656/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/DELL/.ms-ad/Desktop/chatapp/android/app/.cxx/RelWithDebInfo/6v1r2656/arm64-v8a/CMakeFiles/rebuild_cache.dir
